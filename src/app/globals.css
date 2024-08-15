@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* background: linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(15, 15, 111, 1) 76%,
+    rgba(30, 9, 116, 1) 100%
+  ); */
+  background-color: black;
+}
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgb(49, 50, 104) 0%, rgb(22 74 111 / 65%) 35%, rgb(16 15 15 / 0%) 100%);
+    width: 100%;
+    text-align: center; */
+.product{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, rgb(55 55 96/89%) 0%, rgba(4 5 6 /65%) 35%, rgb(16 15 15 / 0%) 100%);
+  /* width: 100%; */
+  text-align: center;
+}
+.link {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after,
+.link.active::after {
+  width: 100%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeInUp {
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+.hover\:fadeInUp:hover {
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+
+
+.OTP-input input {
+  background: white;
+  min-width: 50px;
+  height: 50px;
+  font-size: 20px;
+  border-bottom: 1px solid #D1D3E2;
+  color: #000;
+  outline: none;
+  border-radius: 10px;
+}
+
+.OTP-input div {
+  gap: 11px;
+  justify-content: center;
+  margin: 5px 0 0;
+}
+
+
